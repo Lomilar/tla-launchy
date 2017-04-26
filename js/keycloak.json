@@ -1,0 +1,8 @@
+{
+    "resource": "tla-dashboard",
+    "ssl-required": "none",
+    "auth-server-url": "http://tla-core.adlnet.gov:8081/auth",
+    "realm": "fluent",
+    "realm-public-key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhy66uCJquoV6XS3Dn+pHTYiMGKJB/Wkbjh1QMoqa/Otg5TfcHyGd3Mt/VFujbNbyfFDztt+I+qtVzSBG2oM4Ek0e/1TOrzoOtTmZiMmMHZKvTFJNy/icrwbqKv4vYa4VppBVUdg4LrEA4YrqC4g7IhTMOPep6eWB5GrhdEsmB2ru/YMh3h96V9BULjgJarHwxD87TKMszlW5QXFPJRmxVPfBsnNlw2baC2SRWrurchdaENgX1O0c1IF6o3vMFp/VQO7xngbbdxa9KWM0ercJn/eszu9LJJhv8MPEfr+uJnguk10xkXJqnvA7z5XWpA4edypj+1kDDfv27XZId+zFAwIDAQAB",
+    "public-client": true
+}
