@@ -54,7 +54,7 @@ tla.launchy.send = function (message) {
 
 tla.launchy.refreshDetails = function (subscription) {
     var sub = subscription;
-    if (subscription.toJSON !== undefined) subscription = subscription.toJSON();
+    if (sub.toJSON !== undefined) sub = sub.toJSON();
     sub.subject = keycloak.subject;
     $.ajax({
         url: tla.launchy.baseUrl + '/devices',
