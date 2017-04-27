@@ -19,7 +19,7 @@ if (fs.existsSync("vapid.json")) {
 
 webpush.setGCMAPIKey('AIzaSyABU0rwGyIGjTMdEH7YMkC0alqBeDabdY4');
 webpush.setVapidDetails(
-    'mailto:tla-launchy-test@adlnet.gov',
+    'mailto:tla-launchy-prototype@adlnet.gov',
     vapidKeys.publicKey,
     vapidKeys.privateKey
 );
