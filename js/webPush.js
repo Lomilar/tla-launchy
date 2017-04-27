@@ -6,7 +6,7 @@ if (tla.launchy == null)
 
 tla.launchy.applicationServerPublicKey = "BL3zy24rM6kH_y-usD4_Tz01C4V9_1OfbQI1YbZMjejWgbrTDK2Nk_7VnmKMgN_5N0wfBy8udvDAisQpWj0lzJE";
 tla.launchy.subscription = null;
-tla.launchy.baseUrl = "https://cass.tla.cassproject.org:8081";
+tla.launchy.baseUrl = "https://cass.tla.cassproject.org/launchy";
 
 tla.launchy.initialize = function () {
     if (Notification.permission !== 'granted') {

@@ -29,6 +29,8 @@ build/Release
 # Dependency directories
 node_modules
 jspm_packages
+devices.json
+vapid.json
 
 # Optional npm cache directory
 .npm
