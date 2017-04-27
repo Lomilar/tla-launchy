@@ -13,3 +13,10 @@ keycloak.init({
     console.log("Keycloak sign-in error");
     console.log(error);
 });
+
+function launchy() {
+    var message = {};
+    message.title = window.prompt("Enter the title of the message.");
+    message.body = window.prompt("Enter the body of the message.");
+    tla.launchy.send(message);
+}
