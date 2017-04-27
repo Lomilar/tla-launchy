@@ -55,6 +55,7 @@ app.post('/whoAmI', function (request, res) {
     console.log("WhoAmI:");
     console.log(request.body);
     var req = request.body;
+    var devices = {};
     if (fs.existsSync("devices.json"))
         devices = JSON.parse(fs.readFileSync("devices.json"));
     Object.keys(devices).forEach(function (key) {
@@ -79,8 +80,11 @@ app.post('/devices', function (request, res) {
     console.log("Devices:");
     console.log(request.body);
     var req = request.body;
+    var devices = {};
     if (fs.existsSync("devices.json"))
         devices = JSON.parse(fs.readFileSync("devices.json"));
+    if (devices[req.subject] === undefined)
+        devices[req.subject] = [];
     var ary = JSON.parse(JSON.stringify(devices[req.subject]));
     for (var i = 0; i < ary.length; i++) {
         delete ary[i].endpoint;
