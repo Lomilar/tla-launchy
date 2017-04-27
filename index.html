@@ -1,29 +1,38 @@
 <html>
-    <head>
-        <title>TLA Launchy</title>
-    </head>
-    <body>
-        <header>TLA Launchy is a website that provides TLA Launch Services across multiple platforms.</header>
-        <p>TLA Launchy has been tested on:</p>
-        <ul>
-            <li style="text-decoration:line-through;">Google Chrome</li>
-            <li style="text-decoration:line-through;">Firefox</li>
-            <li style="text-decoration:line-through;">Windows</li>
-            <li style="text-decoration:line-through;">Ubuntu</li>
-            <li style="text-decoration:line-through;">Mac OS</li>
-            <li style="text-decoration:line-through;">Android</li>
-            <li style="text-decoration:line-through;">IOS</li>
-        </ul>
-        <p>
-            This device is bound to: <span id="account"></span>
-            <br>
-            <button>Bind Device to Account</button>
-        </p>
-        <button>Register</button>
-        <button>Request Notification</button>
-        <button>Unregister</button>
-        <script src="js/config.js"></script>
-        <script src="js/keycloak.js"></script>
-        <script src="js/app.js"></script>
-    </body>
+
+<head>
+    <title>TLA Launchy</title>
+</head>
+
+<body>
+    <header>TLA Launchy is a website that provides TLA Launch Services across multiple platforms.
+        <br>TLA Launchy is composed of a server side component (written in Node.js) and this webpage component.</header>
+    <p>TLA Launchy has been tested on:</p>
+    <ul>
+        <li style="">Google Chrome on Ubuntu</li>
+    </ul>
+    <div class="loggedIn">
+        <h4>User Information:</h4> You are logged in as: <span id="keycloakId"></span>
+    </div>
+    <div class="subscribed" style="display:none;">
+        <h4>Device Information:</h4> This device is bound to: <span id="deviceOwnerId"></span>
+        <br>Devices connected to your account: <span id="deviceCount"></span>
+        <br>
+        <button onclick="tla.launchy.unsubscribe();setTimeout(function(){window.location = 'http://tla-core.adlnet.gov:8081/auth/realms/fluent/protocol/openid-connect/logout';},2000);">Unsubscribe and Logout</button>
+        <button onclick="tla.launchy.unsubscribe();">Unsubscribe</button>
+        <button onclick="launchy();">Request Notification</button>
+    </div>
+    <div class="notSubscribed" style="display:none;">
+        <h4>This device is unregistered.</h4> To register this device, click the button below and allow notifications to be sent to this device.
+        <br>
+        <button onclick="tla.launchy.subscribe();">Subscribe</button>
+    </div>
+    <h4 class="blocked" style="display:none;">Blocked.</h4>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/vendor/keycloak.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/webPush.js"></script>
+</body>
+
 </html>
