@@ -149,7 +149,7 @@ tla.launchy.bindServiceWorker = function () {
         navigator.serviceWorker.register('pushServiceWorker.js')
             .then(function (swReg) {
                 console.log('Service Worker is registered', swReg);
-
+                $(".notSupported").hide();
                 ServiceWorkerRegistration = swReg;
                 tla.launchy.initialize();
             })

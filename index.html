@@ -22,12 +22,22 @@
         <li style="text-decoration:line-through">Safari on iPad (<a href="https://onesignal.com/blog/when-will-web-push-be-supported-in-ios/">Q3 or Q4 2017</a>)</li>
         <li style="text-decoration:line-through">Chrome on iPad (<a href="https://onesignal.com/blog/when-will-web-push-be-supported-in-ios/">Q3 or Q4 2017</a>)</li>
     </ul>
-    <div class="loggedIn">
+    <hr>
+    <div class="notSupported">
+        Push Notifications not yet supported on this device.
+        <br> This does not work with Safari/Chrome on iOS yet due to a lack of support for "Service Workers".
+        <br>
+        <br>
+        <a href="https://webkit.org/status/#specification-service-workers">https://webkit.org/status/#specification-service-workers</a> -- Any updates may be found here.
+        <br>
+        <a href="https://onesignal.com/blog/when-will-web-push-be-supported-in-ios/">https://onesignal.com/blog/when-will-web-push-be-supported-in-ios/</a> -- Some people estimate late 2017.</div>
+    <div class="loggedIn" style="display:none;">
         <h4>User Information:</h4> You are logged in as: <span id="keycloakId"></span>
     </div>
     <div class="subscribed" style="display:none;">
         <h4>Device Information:</h4> This device is bound to: <span id="deviceOwnerId"></span>
         <br>Devices connected to your account: <span id="deviceCount"></span>
+        <br>
         <br>
         <button onclick="tla.launchy.unsubscribe();setTimeout(function(){window.location = 'http://tla-core.adlnet.gov:8081/auth/realms/fluent/protocol/openid-connect/logout';},2000);">Unsubscribe and Logout</button>
         <button onclick="tla.launchy.unsubscribe();">Unsubscribe</button>
@@ -35,6 +45,7 @@
     </div>
     <div class="notSubscribed" style="display:none;">
         <h4>This device is unregistered.</h4> To register this device, click the button below and allow notifications to be sent to this device.
+        <br>
         <br>
         <button onclick="tla.launchy.subscribe();">Subscribe</button>
     </div>
