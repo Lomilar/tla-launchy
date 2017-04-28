@@ -6,8 +6,9 @@ keycloak.init({
     flow: 'implicit'
 }).success(function (authenticated) {
     userCredentials = authenticated;
-    tla.launchy.bindServiceWorker();
+    $(".loggedIn").show();
     $("#keycloakId").text(keycloak.tokenParsed.name + " (" + keycloak.subject + ")");
+    tla.launchy.bindServiceWorker();
 }).error(function (error) {
     alert('Failed to initialize authentication');
     console.log("Keycloak sign-in error");
