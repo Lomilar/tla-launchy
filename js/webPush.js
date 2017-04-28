@@ -159,7 +159,7 @@ tla.launchy.bindServiceWorker = function () {
             });
     } else {
         console.warn('Push messaging is not supported');
-        pushButton.textContent = 'Push Not Supported';
+        window.alert('Push Notifications not yet supported on this device.');
     }
 }
 
